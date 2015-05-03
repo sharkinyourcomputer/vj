@@ -14,17 +14,17 @@ def Chop(rate, signal, frame_time):
   # n = number of samples per frame
   
   while True:
-    if len(signal) % n == 0
+    if len(signal) % n == 0:
       break
     else:
-      np.append(signal, 0)
+      signal = np.append(signal, 0)
   # pad signal with zeros until length is divisible by n
  
   m = len(signal)/n
   output = np.zeros(shape=(m, n))
   
   for j in range(0,m):
-    output[j,:]=signal[j:j+n]
+    output[j,:]=signal[j*n:j*n+n]
     
   # build an array with len(signal) / n entries,
   # each of which contains an individual frame
