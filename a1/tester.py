@@ -13,7 +13,7 @@ rate, signal = scipy.io.wavfile.read('test.wav')
 
 # b = chop.stFFT(rate, signal, 100)
 
-c = chop.AverageEnergy(rate, signal, 100)
+# c = chop.AverageEnergy(rate, signal, 100)
 
-chop.AverageEnergyPlot(rate, signal, 100)
+chop.AverageEnergyPlot(rate, signal, 25)
 
